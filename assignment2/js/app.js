@@ -15,8 +15,9 @@
 
 	function ToBuyShoppingController(ShoppingListCheckOffService){
 		var toBuyController = this;
-		var items = ShoppingListCheckOffService.getToBuyItems();
-		var toBuyController.buy = function(){
+		toBuyController.items = ShoppingListCheckOffService.getToBuyItems();
+		
+		toBuyController.buy = function(){
 			ShoppingListCheckOffService.addToBoughtItem();
 			ShoppingListCheckOffService.removeToBuyItem();
 
@@ -32,10 +33,8 @@
 
 	function ShoppingListCheckOffService(){
 		var service = this;
-		var toBuyItems= [];
-		var boughtItems = [];
 
-		toBuyItems = [
+		var toBuyItems = [
 		              {
 		            	  name: "Milk",
 		            	  quantity: "2"
