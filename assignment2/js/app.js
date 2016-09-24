@@ -57,7 +57,9 @@
 		            	  quantity: "65"
 		              }
 		            
-		              ];
+		    ];
+		
+		var boughtItems = [];
 
 		//add to bought items
 		service.addToBoughtItem = function (itemName, quantity) {

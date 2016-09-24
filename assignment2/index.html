@@ -35,9 +35,9 @@ button>span {
 			<div class="col-md-6" ng-controller="ToBuyShoppingController as ToBuyController">
 				<h2>To Buy:</h2>
 				<ul>
-					<li ng-repeat= "item in ToBuyController.items">Buy {{item.name}} {{item.quantity}}s
+					<li ng-repeat= "item in ToBuyController.items">Buy {{item.quantity}} {{item.name}}s
 						<button class="btn btn-default">
-							<span class="glyphicon glyphicon-ok"></span> Bought
+							<span class="glyphicon glyphicon-ok"></span> Buy
 						</button>
 					</li>
 				</ul>
