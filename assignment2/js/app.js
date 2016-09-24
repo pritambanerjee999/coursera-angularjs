@@ -1,47 +1,59 @@
 (function () {
 	'use strict';
 
+	//declares the application
+	//then declare the controller
+	//after that declare the service
 	angular.module('ShoppingListCheckOff', [])
 	.controller('ToBuyShoppingController', ToBuyShoppingController)
-	.controller('AlreadyBoughtShoppingController', AlreadyBoughtShoppingController);
+	.controller('AlreadyBoughtShoppingController', AlreadyBoughtShoppingController)
+	.service('ShoppingListCheckOffService',ShoppingListCheckOffService);
 
-	ToBuyShoppingController.$inject = ['$scope'];
-	AlreadyBoughtShoppingController.$inject = ['$scope'];
+	//injecting the service
+	AlreadyBoughtShoppingController.$inject = ['ShoppingListCheckOffService'];
+	ToBuyShoppingController.$inject = ['ShoppingListCheckOffService'];
 
-	function ToBuyShoppingController($scope){
-		$scope.name = "";
-		$scope.totalValue = 0;  
-		$scope.lunchBox = "Enter the lunch name";
-		$scope.lunchMessage = "";
-
-		$scope.tooMuchLunchCheck = function(){
-			var lunchString = $scope.lunchBox;
-			var lunchItems = lunchString.split(",");
-
-			if (lunchItems.length>3){
-				$scope.lunchMessage = "Too much!"
-			}else{
-				$scope.lunchMessage = "Enjoy!"
-			}
-		}
+	function ToBuyShoppingController(ShoppingListCheckOffService){
+		
 	}
 	
 	
-	function AlreadyBoughtShoppingController($scope){
-		$scope.name = "";
-		$scope.totalValue = 0;  
-		$scope.lunchBox = "Enter the lunch name";
-		$scope.lunchMessage = "";
-
-		$scope.tooMuchLunchCheck = function(){
-			var lunchString = $scope.lunchBox;
-			var lunchItems = lunchString.split(",");
-
-			if (lunchItems.length>3){
-				$scope.lunchMessage = "Too much!"
-			}else{
-				$scope.lunchMessage = "Enjoy!"
-			}
-		}
+	function  AlreadyBoughtShoppingController(ShoppingListCheckOffService){
+		
 	}
+	
+	
+	function ShoppingListCheckOffService(){
+		service = this;
+		var toBuyItems= [];
+		var boughtItems = [];
+		
+		//add to bought items
+		service.addToBoughtItem = function (itemName, quantity) {
+		    var toBuyItem = {
+		      name: itemName,
+		      quantity: quantity
+		    };
+		    boughtItems.push(item);
+		  };
+		  
+		  //remove from toBuyItems
+		  service.removeToBuyItem = function (itemIdex) {
+			   toBuyItems.splice(itemIdex, 1);
+		  };
+		  
+		  service.getToBuyItems = function () {
+			    return items;
+		  };
+		  
+		  service.getToBuyItems = function () {
+			    return toBuyItems;
+		  };
+		  
+		  service.getBoughtItems = function () {
+			    return boughtItems;
+		  };
+		
+	}
+	
 })();
