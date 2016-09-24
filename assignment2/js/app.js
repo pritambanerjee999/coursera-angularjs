@@ -15,7 +15,7 @@
 
 	function ToBuyShoppingController(ShoppingListCheckOffService){
 		var toBuyController = this;
-		var items = ShoppingListCheckOffService.getItems();
+		var items = ShoppingListCheckOffService.getToBuyItems();
 		var toBuyController.buy = function(){
 			ShoppingListCheckOffService.addToBoughtItem();
 			ShoppingListCheckOffService.removeToBuyItem();
