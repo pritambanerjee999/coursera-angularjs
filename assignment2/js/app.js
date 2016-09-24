@@ -32,6 +32,7 @@
 		var alreadyBoughtController = this;
 		
 		alreadyBoughtController.boughtItems =  ShoppingListCheckOffService.getBoughtItems();
+		
 	}
 
 
