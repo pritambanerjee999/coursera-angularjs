@@ -17,9 +17,10 @@
 		var toBuyController = this;
 		toBuyController.items = ShoppingListCheckOffService.getToBuyItems();
 		
-		toBuyController.buy = function(){
-			ShoppingListCheckOffService.addToBoughtItem();
-			ShoppingListCheckOffService.removeToBuyItem();
+		toBuyController.buy = function(index){
+			console.log("In Buy Method:");
+			ShoppingListCheckOffService.addToBoughtItem(index);
+			ShoppingListCheckOffService.removeToBuyItem(index);
 
 		}
 
@@ -62,11 +63,9 @@
 		var boughtItems = [];
 
 		//add to bought items
-		service.addToBoughtItem = function (itemName, quantity) {
-			var toBuyItem = {
-					name: itemName,
-					quantity: quantity
-			};
+		service.addToBoughtItem = function (index) {
+			console.log(toButItems[index]);
+			var itemToBeAdded = toBuyItems[index];
 			boughtItems.push(item);
 		};
 
