@@ -35,9 +35,9 @@ button>span {
 			<div class="col-md-6" ng-controller="ToBuyShoppingController as ToBuyController">
 				<h2>To Buy:</h2>
 				<ul>
-					<li ng-repeat= "item in ToBuyController.items">Buy {{item.quantity}} {{item.name}}s
+					<li ng-repeat= "item in ToBuyController.items">Buy {{item.quantity}} {{item.name}}
 						<button class="btn btn-default" ng-click=ToBuyController.buy($index) >
-							<span class="glyphicon glyphicon-ok"></span> Buy
+							<span class="glyphicon glyphicon-ok"></span> Bought
 						</button>
 					</li>
 				</ul>
@@ -48,7 +48,7 @@ button>span {
 			<div class="col-md-6" ng-controller= "AlreadyBoughtShoppingController as AlreadyBoughtController">
 				<h2>Already Bought:</h2>
 				<ul >
-					<li ng-repeat= "item in AlreadyBoughtController.boughtItems">Bought {{item.quantity}}  {{item.name}}s</li>
+					<li ng-repeat= "item in AlreadyBoughtController.boughtItems">Bought {{item.quantity}}  {{item.name}}</li>
 				</ul>
 				<div class="emptyMessage" ng-if="AlreadyBoughtController.boughtItems.length == 0">Nothing bought yet.</div>
 			</div>
