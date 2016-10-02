@@ -17,6 +17,7 @@
 		
 		var narrowItDownController = this;
 		narrowItDownController.narrow = function(){
+			console.log("In controller call");
 			MenuSearchService.getMatchedMenuItems("small_portion_name");
 		}
 	}
