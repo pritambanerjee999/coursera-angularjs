@@ -6,7 +6,7 @@
 	//after that declare the service
 	angular.module('NarrowItDownApp', [])
 	.controller('NarrowItDownController', NarrowItDownController)
-	.controller('AlreadyBoughtShoppingController', AlreadyBoughtShoppingController)
+//	.controller('AlreadyBoughtShoppingController', AlreadyBoughtShoppingController)
 	.service('MenuSearchService',MenuSearchService);
 
 	//injecting the service
