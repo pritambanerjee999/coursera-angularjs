@@ -1,6 +1,6 @@
 (function () {
 	'use strict';
-
+    
 	//declares the application
 	//then declare the controller
 	//after that declare the service
@@ -11,7 +11,7 @@
 
 	//injecting the service
 	NarrowItDownController.$inject = ['MenuSearchService'];
-	ToBuyShoppingController.$inject = ['ShoppingListCheckOffService'];
+//	ToBuyShoppingController.$inject = ['ShoppingListCheckOffService'];
 
 	function NarrowItDownController(MenuSearchService){
 		
@@ -21,8 +21,8 @@
 		}
 	}
 	
-	MenuSearchService.$inject = ['$http', 'domainName'];
-	function MenuSearchService($http, domainName){
+	MenuSearchService.$inject = ['$http'];
+	function MenuSearchService($http){
 		var service = this;
 		
 		service.getMatchedMenuItems = function (searchTerm) {
