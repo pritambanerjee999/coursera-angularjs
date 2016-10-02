@@ -18,7 +18,16 @@
 		var narrowItDownController = this;
 		narrowItDownController.narrow = function(){
 			console.log("In controller call");
-			MenuSearchService.getMatchedMenuItems("small_portion_name");
+			var promise = MenuSearchService.getMatchedMenuItems("small_portion_name");
+			
+			promise.then(function (response) {
+			   menu.categories = response.data;
+			})
+			 .catch(function (error) {
+			    console.log("Something went terribly wrong.");
+			});
+			
+			
 		}
 	}
 	
