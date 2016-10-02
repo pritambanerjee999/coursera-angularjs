@@ -32,7 +32,7 @@
 		      url: ("https://davids-restaurant.herokuapp.com/menu_items.json")
 		    });
 		    console.log("Response >>> :");
-		    console.log(response.data);
+		    console.log(response);
 		    return response;
 		  };
 	}
