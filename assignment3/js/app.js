@@ -15,6 +15,10 @@
 
 	function NarrowItDownController(MenuSearchService){
 		
+		var narrowItDownController = this;
+		narrowItDownController.narrow = function(){
+			MenuSearchService.getMatchedMenuItems("small_portion_name");
+		}
 	}
 	
 	MenuSearchService.$inject = ['$http', 'domainName'];
@@ -26,7 +30,8 @@
 		      method: "GET",
 		      url: ("https://davids-restaurant.herokuapp.com/menu_items.json")
 		    });
-
+		    console.log("Response >>> :");
+		    console.log(response.data);
 		    return response;
 		  };
 	}
