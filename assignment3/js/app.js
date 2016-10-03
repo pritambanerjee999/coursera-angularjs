@@ -22,7 +22,8 @@
 			
 			promise.then(function (response) {
 			   var items = response.data;
-			   console.log("Length" + items.length);
+			   console.log(items);
+			   console.log("Length = " + items.length);
 			   for (var i=0; i < items.length; i++){
 				   console.log("Did not match !!!!=== " + items[i].description);
 				   if (items[i].description.includes(narrowItDownController.searchItem)){
