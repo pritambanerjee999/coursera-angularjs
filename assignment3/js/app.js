@@ -6,28 +6,31 @@
 	//after that declare the service
 	angular.module('NarrowItDownApp', [])
 	.controller('NarrowItDownController', NarrowItDownController)
-//	.controller('AlreadyBoughtShoppingController', AlreadyBoughtShoppingController)
 	.service('MenuSearchService',MenuSearchService);
 
 	//injecting the service
 	NarrowItDownController.$inject = ['MenuSearchService'];
-//	ToBuyShoppingController.$inject = ['ShoppingListCheckOffService'];
 
 	function NarrowItDownController(MenuSearchService){
 		
 		var narrowItDownController = this;
+		
 		narrowItDownController.narrow = function(){
 			console.log("In controller call");
 			var promise = MenuSearchService.getMatchedMenuItems("small_portion_name");
-			
 			promise.then(function (response) {
-			   menu.categories = response.data;
+			   var items = response.data;
+			   for (int i =0; i < items.length; i++){
+				   if (items.desc){
+					   narrowItDownController.found = items[i];
+				   }
+			   }
+			   console.log(response.data);
+			   return narrowItDownController.found;
 			})
 			 .catch(function (error) {
 			    console.log("Something went terribly wrong.");
 			});
-			
-			
 		}
 	}
 	
@@ -40,8 +43,6 @@
 		      method: "GET",
 		      url: ("https://davids-restaurant.herokuapp.com/menu_items.json")
 		    });
-		    console.log("Response >>> :");
-		    console.log(response);
 		    return response;
 		  };
 	}
