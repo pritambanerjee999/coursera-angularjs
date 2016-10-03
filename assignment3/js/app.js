@@ -23,11 +23,11 @@
 			
 			promise.then(function (response) {
 			   var items = response.data.menu_items;
-			   console.log(items);
-			   console.log("Length = " + items.length);
+			     console.log(items);
+			  // console.log("Length = " + items.length);
 			   for (var i=0; i < items.length; i++){
 				   if (items[i].description.includes(narrowItDownController.searchItem)){
-					   console.log("Matched >>> " + items[i].description);
+					  // console.log("Matched >>> " + items[i].description);
 					   narrowItDownController.found = items[i];
 				   }
 			   }
@@ -53,6 +53,21 @@
 		  };
 	}
 	
+	
+	function foundItemsDirective() {
+		  var ddo = {
+		    templateUrl: 'loader/shoppingList.html',
+		    scope: {
+		      items: '<',
+		      onRemove: '&'
+		    },
+		    controller: NarrowItDownController,
+		    controllerAs: 'narrowItController',
+		    bindToController: true
+		  };
+
+		  return ddo;
+		}
 	
 	  
 
