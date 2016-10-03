@@ -17,12 +17,13 @@
 		narrowItDownController.searchItem = "";
 		narrowItDownController.narrow = function(){
 			console.log("In controller call");
-			var promise = MenuSearchService.getMatchedMenuItems("small_portion_name");
+			var promise = MenuSearchService.getMatchedMenuItems();
 			promise.then(function (response) {
 			   var items = response.data;
-			   for (var i =0; i < items.length; i++){
-				   if (items[i].desc.includes(narrowItDownController.searchItem)){
-					   console.log(items[i]);
+			   for (var i=0; i < items.length; i++){
+				   console.log("Did not match !!!!=== " + items[i].description);
+				   if (items[i].description.includes(narrowItDownController.searchItem)){
+					   console.log("Matched >>> " + items[i].description);
 					   narrowItDownController.found = items[i];
 				   }
 			   }
@@ -39,7 +40,7 @@
 	function MenuSearchService($http){
 		var service = this;
 		
-		service.getMatchedMenuItems = function (searchTerm) {
+		service.getMatchedMenuItems = function () {
 		    var response = $http({
 		      method: "GET",
 		      url: ("https://davids-restaurant.herokuapp.com/menu_items.json")
