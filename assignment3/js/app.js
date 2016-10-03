@@ -15,13 +15,13 @@
 		
 		var narrowItDownController = this;
 		
-		narrowItDownController.narrow = function(){
+		narrowItDownController.narrow = function(findMe){
 			console.log("In controller call");
 			var promise = MenuSearchService.getMatchedMenuItems("small_portion_name");
 			promise.then(function (response) {
 			   var items = response.data;
-			   for (int i =0; i < items.length; i++){
-				   if (items.desc){
+			   for (var i =0; i < items.length; i++){
+				   if (items[i].desc.includes(findMe)){
 					   narrowItDownController.found = items[i];
 				   }
 			   }
