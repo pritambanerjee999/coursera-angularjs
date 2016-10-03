@@ -16,9 +16,10 @@
 		var narrowItDownController = this;
 		narrowItDownController.searchItem = "";
 		narrowItDownController.narrow = function(){
-			console.log("In controller call");
+			
 			
 			var promise = MenuSearchService.getMatchedMenuItems();
+			
 			promise.then(function (response) {
 			   var items = response.data;
 			   console.log("Length" + items.length);
