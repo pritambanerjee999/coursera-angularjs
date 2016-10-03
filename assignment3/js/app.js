@@ -21,7 +21,7 @@
 			var promise = MenuSearchService.getMatchedMenuItems();
 			
 			promise.then(function (response) {
-			   var items = response.data;
+			   var items = response.data.menu_items;
 			   console.log(items);
 			   console.log("Length = " + items.length);
 			   for (var i=0; i < items.length; i++){
