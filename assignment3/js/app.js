@@ -6,7 +6,8 @@
 	//after that declare the service
 	angular.module('NarrowItDownApp', [])
 	.controller('NarrowItDownController', NarrowItDownController)
-	.service('MenuSearchService',MenuSearchService);
+	.service('MenuSearchService',MenuSearchService)
+	.directive('foundItems', foundItemsDirective);
 
 	//injecting the service
 	NarrowItDownController.$inject = ['MenuSearchService'];
@@ -25,7 +26,6 @@
 			   console.log(items);
 			   console.log("Length = " + items.length);
 			   for (var i=0; i < items.length; i++){
-				   console.log("Did not match !!!!=== " + items[i].description);
 				   if (items[i].description.includes(narrowItDownController.searchItem)){
 					   console.log("Matched >>> " + items[i].description);
 					   narrowItDownController.found = items[i];
