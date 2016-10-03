@@ -14,14 +14,15 @@
 	function NarrowItDownController(MenuSearchService){
 		
 		var narrowItDownController = this;
-		
-		narrowItDownController.narrow = function(findMe){
+		narrowItController.searchItem = "";
+		narrowItDownController.narrow = function(){
 			console.log("In controller call");
 			var promise = MenuSearchService.getMatchedMenuItems("small_portion_name");
 			promise.then(function (response) {
 			   var items = response.data;
 			   for (var i =0; i < items.length; i++){
-				   if (items[i].desc.includes(findMe)){
+				   if (items[i].desc.includes(narrowItController.searchItem)){
+					   console.log(items[i]);
 					   narrowItDownController.found = items[i];
 				   }
 			   }
