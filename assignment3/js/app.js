@@ -69,7 +69,7 @@
 		  return ddo;
 	}
 	
-	function foundItemsDirectiveController(){
+	function FoundItemsDirectiveController(){
 		var found = this;
 	}
 
