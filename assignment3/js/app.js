@@ -69,6 +69,8 @@
 		  return ddo;
 	}
 	
-	
+	function foundItemsDirectiveController(){
+		
+	}
 
 })();
