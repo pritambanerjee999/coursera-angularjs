@@ -1,21 +1,14 @@
 <!-- display menu item, its short_name, and the description -->
 
-<div class="loader">
+ <!-- <div class="loader"> -->
 
 I am here 
 
 <ol>
   <li ng-repeat="item in foundDirectiveController.items">
-    {{ item.name }}    {{ item.short_name }}   {{item.short_name}}
-    <button ng-click="foundDirectiveController.onRemove({index: $index});">Don't want this one!</button>
+      {{ item.name}} 
+       {{ item.short_name}}
+      <button ng-click="foundDirectiveController.onRemove({index: $index});">Don't want this one!</button>
   </li>
 </ol>
 
-
-<ol>
-<li ng-repeat="item in items">
-    {{ item.name }}    {{ item.short_name }}   {{item.short_name}}
-    <button ng-click="foundDirectiveController.onRemove({index: $index});">Don't want this one!</button>
-  </li>
-</ol>
-</div>
