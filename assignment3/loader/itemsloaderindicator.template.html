@@ -2,7 +2,7 @@
 
 <div class="loader">
 <ol>
-  <li ng-repeat="item in foundDirectiveController.found">
+  <li ng-repeat="item in foundDirectiveController.items">
     {{ item.name }}    {{ item.short_name }}   {{item.short_name}}
     <button ng-click="foundDirectiveController.onRemove({index: $index});">Don't want this one!</button>
   </li>
