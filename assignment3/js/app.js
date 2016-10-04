@@ -17,9 +17,10 @@
 		var narrowItDownController = this;
 		narrowItDownController.searchItem = "";
 		narrowItDownController.narrow = function(){
-			
+		narrowItDownController.found= {};
 			
 			var promise = MenuSearchService.getMatchedMenuItems();
+			
 			
 			promise.then(function (response) {
 			   var count = 0;
