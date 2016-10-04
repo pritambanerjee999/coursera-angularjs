@@ -61,8 +61,8 @@
 		      items: '<',
 		      onRemove: '&'
 		    },
-		    controller: NarrowItDownController,
-		    controllerAs: 'narrowItController',
+		    controller: FoundItemsDirectiveController,
+		    controllerAs: 'foundDirectiveController',
 		    bindToController: true
 		  };
 
@@ -70,7 +70,7 @@
 	}
 	
 	function foundItemsDirectiveController(){
-		
+		var found = this;
 	}
 
 })();
