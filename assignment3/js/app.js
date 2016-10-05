@@ -21,7 +21,7 @@
 			
 			var promise = MenuSearchService.getMatchedMenuItems();
 			
-			narrowItDownController.removeItem() = function(index){
+			narrowItDownController.removeItem = function(index){
 				narrowItDownController.found.splice(itemIndex, 1);
 			};
 			
