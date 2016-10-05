@@ -21,6 +21,7 @@
 			
 			var promise = MenuSearchService.getMatchedMenuItems();
 			
+			narrowItDownController.removeItem = MenuSearchService.removeItem();
 			
 			promise.then(function (response) {
 			   var count = 0;
