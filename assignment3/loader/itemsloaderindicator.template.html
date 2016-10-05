@@ -3,8 +3,8 @@
 <ol>
   <li ng-repeat="item in foundDirectiveController.items">
     {{item.name}} and {{item.short_name}} and {{item.description}}
-      <button ng-click="foundDirectiveController.onRemove({index: $index});">Don't want this one!</button>
+      <button ng-click="foundDirectiveController.onRemove({index: $index});">  Don't want this one!</button>
   </li>
 </ol>
-<div class="error" ng-if="foundDirectiveController.items.length == 0 ">NOTHING FOUND!</div>
+<div ng-if="foundDirectiveController.items.length == 0 ">NOTHING FOUND!</div>
 
