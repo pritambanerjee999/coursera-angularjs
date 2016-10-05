@@ -54,6 +54,10 @@
 		    });
 		    return response;
 		  };
+		  
+		  service.removeItem = function (itemIndex) {  
+			items.splice(itemIndex, 1);
+		  };
 	}
 	
 	
