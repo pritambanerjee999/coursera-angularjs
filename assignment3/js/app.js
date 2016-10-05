@@ -16,7 +16,7 @@
 		
 		var narrowItDownController = this;
 		narrowItDownController.searchItem = "";
-		narrowItDownController.found= {};
+		narrowItDownController.found= [];
 		
 		narrowItDownController.removeItem = function(index){
 			narrowItDownController.found.splice(index, 1);
