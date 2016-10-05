@@ -25,7 +25,7 @@
 		narrowItDownController.narrow = function(){
 			
 			var promise = MenuSearchService.getMatchedMenuItems();
-			
+			narrowItDownController.found = [];
 			promise.then(function (response) {
 			   var count = 0;
 			   var items = response.data.menu_items;
