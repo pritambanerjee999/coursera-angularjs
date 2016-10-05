@@ -30,6 +30,7 @@
 			   var count = 0;
 			   var items = response.data.menu_items;
 			   if (narrowItDownController.searchItem.length == 0){
+				   narrowItDownController.found = [];
 				   return narrowItDownController.found;
 			   }
 			   
