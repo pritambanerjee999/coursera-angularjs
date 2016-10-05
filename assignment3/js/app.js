@@ -16,14 +16,15 @@
 		
 		var narrowItDownController = this;
 		narrowItDownController.searchItem = "";
-		narrowItDownController.narrow = function(){
 		narrowItDownController.found= {};
+		
+		narrowItDownController.removeItem = function(index){
+			narrowItDownController.found.splice(index, 1);
+		};
+		
+		narrowItDownController.narrow = function(){
 			
 			var promise = MenuSearchService.getMatchedMenuItems();
-			
-			narrowItDownController.removeItem = function(index){
-				narrowItDownController.found.splice(index, 1);
-			};
 			
 			promise.then(function (response) {
 			   var count = 0;
