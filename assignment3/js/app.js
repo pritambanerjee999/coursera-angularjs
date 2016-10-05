@@ -29,11 +29,12 @@
 			promise.then(function (response) {
 			   var count = 0;
 			   var items = response.data.menu_items;
-			     console.log(items);
-			  // console.log("Length = " + items.length);
+			   if (narrowItDownController.searchItem.length == 0){
+				   return narrowItDownController.found;
+			   }
+			   
 			   for (var i=0; i < items.length; i++){
 				   if (items[i].description.includes(narrowItDownController.searchItem)){
-					  // console.log("Matched >>> " + items[i].description);
 					   narrowItDownController.found[count] = items[i];
 					   count++;
 				   }
