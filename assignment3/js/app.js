@@ -40,7 +40,7 @@
 					   count++;
 				   }
 			   }
-			   
+			   console.log(narrowItDownController.found);
 			   return narrowItDownController.found;
 			})
 			 .catch(function (error) {

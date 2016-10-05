@@ -5,6 +5,7 @@
     {{item.name}} and {{item.short_name}} and {{item.description}}
       <button ng-click="foundDirectiveController.onRemove({index: $index});">Don't want this one!</button>
   </li>
+  <li ng-if="foundDirectiveController.items.length == 0 "> NOTHING FOUND! </li>
 </ol>
 <div class="error" ng-if="foundDirectiveController.items.length == 0 ">NOTHING FOUND!</div>
 
