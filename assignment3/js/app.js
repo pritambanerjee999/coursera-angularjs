@@ -22,7 +22,7 @@
 			var promise = MenuSearchService.getMatchedMenuItems();
 			
 			narrowItDownController.removeItem = function(index){
-				narrowItDownController.found.splice(itemIndex, 1);
+				narrowItDownController.found.splice(index, 1);
 			};
 			
 			promise.then(function (response) {
