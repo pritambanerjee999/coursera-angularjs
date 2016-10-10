@@ -20,7 +20,7 @@ function CategoriesListController(MenuDataService) {
 	  });
 
 	  menu.logMenuItems = function (shortName) {
-	    var promise = MenuCategoriesService.getMenuForCategory(shortName);
+	    var promise = MenuCategoriesService.getItemsForCategory(shortName);
 
 	    promise.then(function (response) {
 	      console.log(response.data);
