@@ -16,6 +16,7 @@
 			      url: (hostName + "/categories.json")
 			    });
 
+			   console.log("Response" + response);
 			    return response;
 		}
 		
