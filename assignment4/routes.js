@@ -21,7 +21,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 
   // Premade list page
   .state('categoriesList', {
-    url: 'categories',
+    url: '/categories',
     templateUrl: 'categories/main-shoppinglist.template.html',
     controller: 'CategoriesListController as categoriesController',
     resolve: {
