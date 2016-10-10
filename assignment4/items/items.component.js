@@ -2,7 +2,7 @@
 	angular.module('data')
 	.component('items',{
 		templateUrl:'items.template.html',
-		controller: ItemsComponentController,
+	//	controller: ItemsComponentController,
 		bindings:{
 			items: '<',
 			myTitle: '@title',
