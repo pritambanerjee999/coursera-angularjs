@@ -10,7 +10,7 @@
 		
 		// https://davids-restaurant.herokuapp.com/categories.json
 		service.getAllCategories = function(){
-			
+			console.log("In categories");
 			var response = $http({
 			      method: "GET",
 			      url: (hostName + "/categories.json")
