@@ -3,7 +3,8 @@
 	.service('MenuDataService', MenuDataService)
 	.constant('hostName',"https://davids-restaurant.herokuapp.com");
 	
-	MenuDataService.$inject = ['$http', 'hostName']
+	MenuDataService.$inject = ['$http', 'hostName'];
+	
 	function MenuDataService($http, ApiBasePath){
 		service = this;
 		

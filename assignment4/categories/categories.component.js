@@ -15,7 +15,8 @@
 	angular.module('data')
 	.component('categories',{
 		templateUrl:'categories.template.html',
-		controller: CategoriesComponentController,
+		controller: CategoriesListController,
+		controllerAs: 'categoriesListController',
 		bindings:{
 			items: '<',
 			myTitle: '@title',
