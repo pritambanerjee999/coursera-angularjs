@@ -5,7 +5,7 @@
 	
 	MenuDataService.$inject = ['$http', 'hostName'];
 	
-	function MenuDataService($http, ApiBasePath){
+	function MenuDataService($http, hostName){
 		service = this;
 		
 		// https://davids-restaurant.herokuapp.com/categories.json
