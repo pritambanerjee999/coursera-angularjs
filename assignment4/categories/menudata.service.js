@@ -15,8 +15,9 @@
 			      method: "GET",
 			      url: (hostName + "/categories.json")
 			    });
-
-			   console.log("Response" + response);
+			
+			console.log("Response");
+			   console.log(response);
 			    return response;
 		}
 		

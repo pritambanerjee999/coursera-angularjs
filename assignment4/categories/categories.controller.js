@@ -11,6 +11,8 @@ function CategoriesListController(MenuDataService) {
 	 var menu = this;
 
 	  var promise = MenuDataService.getAllCategories();
+	  console.log("Promise=");
+	  console.log(promise);
 
 	  promise.then(function (response) {
 		console.log(reponse.data);
