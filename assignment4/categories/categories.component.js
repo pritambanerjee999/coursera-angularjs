@@ -18,9 +18,7 @@
 	//	controller: CategoriesListController,
 	//	controllerAs: 'categoriesListController',
 		bindings:{
-			items: '<',
-			myTitle: '@title',
-			onRemove: '&'
+			categories: '<',
 		}
 	});
 	

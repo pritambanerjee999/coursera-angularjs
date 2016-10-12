@@ -1,6 +1,8 @@
 <h3>List of Menu Categories</h3>
 <ul>
-   <li ng-repeat="category in categoriesListController.categories">
+{{categoriesController.categories}}
+   <li ng-repeat="category in categoriesController.categories">
+  
      (<a href="" ng-click="menu.logMenuItems(category.short_name);">{{ category.short_name }}</a>)
        {{ category.name }}
    </li>

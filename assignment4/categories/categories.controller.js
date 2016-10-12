@@ -13,6 +13,7 @@ function CategoriesListController(MenuDataService) {
 	  var promise = MenuDataService.getAllCategories();
 
 	  promise.then(function (response) {
+		console.log(reponse.data);
 	    menu.categories = response.data;
 	  })
 	  .catch(function (error) {
