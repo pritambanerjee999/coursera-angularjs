@@ -5,14 +5,14 @@ angular.module('data')
 .controller('CategoriesListController', CategoriesListController);
 
 
-CategoriesListController.$inject = ['MenuDataService'];
+CategoriesListController.$inject = ['categories'];
 
 function CategoriesListController(MenuDataService) {
 	 var menu = this;
 
-	  var promise = MenuDataService.getAllCategories();
-	  console.log("Promise=");
-	  console.log(promise);
+	//  var promise = MenuDataService.getAllCategories();
+	  console.log("Categories=");
+	  console.log(categories);
 
 	  promise.then(function (response) {
 		console.log(reponse.data);
