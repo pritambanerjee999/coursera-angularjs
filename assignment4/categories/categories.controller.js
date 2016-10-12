@@ -15,7 +15,7 @@ function CategoriesListController(MenuDataService) {
 	  console.log(promise);
 
 	  promise.then(function (response) {
-		console.log(reponse.data);
+		console.log(response.data);
 	    menu.categories = response.data;
 	  })
 	  .catch(function (error) {
