@@ -10,9 +10,9 @@ CategoriesListController.$inject = ['MenuDataService'];
 function CategoriesListController(MenuDataService) {
 	 var menu = this;
 
-	//  var promise = MenuDataService.getAllCategories();
-	  console.log("Categories=");
-	  console.log(categories);
+	  var promise = MenuDataService.getAllCategories();
+	//  console.log("Categories=");
+	 // console.log(categories);
 
 	  promise.then(function (response) {
 		console.log(reponse.data);
