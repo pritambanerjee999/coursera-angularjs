@@ -30,7 +30,7 @@
 			          category: categoryShortName
 			        }
 			    });
-
+				console.log("categoryShortName : " + categoryShortName);
 			    return response;
 		}
 	}
