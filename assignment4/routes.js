@@ -26,11 +26,30 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'CategoriesListController as categoriesController',
     resolve: {
       categories: ['MenuDataService', function (MenuDataService) {
-    	 console.log("I come in routes");
+    	// console.log("I come in routes");
         return MenuDataService.getAllCategories();
       }]
     }
-  });
+  })
+  
+  .state('items', {
+	    url: '/items/{itemId}',
+	    templateUrl: 'items/items.template.html',
+	    controller: 'ItemController as itemController',
+	    resolve: {
+	      items: ['$stateParams', 'MenuDataService',
+	            function ($stateParams, MenuDataService) {
+	              return MenuDataService.getItemsForCategory()
+	                .then(function (items) {
+	                	console.log("items:");
+	                	console.log(items);
+	                  return items[$stateParams.itemId];
+	                });
+	            }]
+	    }
+	  });
+  
+  
 }
 
 })();
