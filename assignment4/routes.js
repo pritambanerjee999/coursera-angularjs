@@ -39,7 +39,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 	    resolve: {
 	      items: ['$stateParams', 'MenuDataService',
 	            function ($stateParams, MenuDataService) {
-	              return MenuDataService.getItemsForCategory()
+	              return MenuDataService.getItemsForCategory($stateParams.itemId)
 	                .then(function (items) {
 	                	console.log("items:");
 	                	console.log(items);
