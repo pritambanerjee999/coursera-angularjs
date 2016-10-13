@@ -43,7 +43,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 	                .then(function (response) {
 	                	console.log("items:");
 	                	console.log(response.data);
-	                  return items[$stateParams.itemId];
+	                  return response.data[$stateParams.itemId];
 	                });
 	            }]
 	    }
