@@ -5,10 +5,11 @@ angular.module('data')
 .controller('ItemsController', ItemsController);
 
 
-ItemsController.$inject = ['MenuDataService'];
+ItemsController.$inject = ['MenuDataService', '$stateParam'];
 
 function ItemsController(MenuDataService) {
-	 var items = this;
+	 var itemsController = this;
+	 itemsController
 }
 
 })();
